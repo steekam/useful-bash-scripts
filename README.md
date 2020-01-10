@@ -6,3 +6,4 @@
 
 - ``create_vhost.py``  Interactive script. Prompts you for desired domain name and root path of the domain root directory. It also verifies path is an absolute path.
 - ``destroy_vhost.py`` Pass domain name as an argument and it deletes config file and updated hosts file.
+- ``template.conf`` Template config file for the virtual host config file
