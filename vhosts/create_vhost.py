@@ -22,7 +22,8 @@ class Vhost_automator:
     print("Creating configurations...")
     # file template name domain_name.conf
     virtual_hosts_base_path = "/etc/httpd/virtual_hosts"
-    template_contents = open("template.conf", "r").read()
+    script_dir = os.path.dirname(os.path.realpath(sys.argv[0]))
+    template_contents = open(script_dir+"/template.conf", "r").read()
     template_lines = list(map(lambda x: x.format(domain_name=self.domain_name, root_path=self.root_path) , template_contents.splitlines()))
     template_final = "\n".join(template_lines)
 
